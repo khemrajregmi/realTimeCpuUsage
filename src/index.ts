@@ -1,21 +1,22 @@
-// index.js
+// src/index.ts
 
-const express = require('express');
-const os = require('os');
-const Influx = require('influx');
+import express, { Request, Response } from 'express';
+import os from 'os';
+import { InfluxDB, FieldType } from 'influx';
+
 const app = express();
 const port = 3001;
 
 // Setup InfluxDB
-const influx = new Influx.InfluxDB({
+const influx = new InfluxDB({
   host: 'localhost',
   database: 'system_metrics',
   schema: [
     {
       measurement: 'cpu_ram_usage',
       fields: {
-        cpu_usage: Influx.FieldType.FLOAT,
-        ram_usage: Influx.FieldType.FLOAT,
+        cpu_usage: FieldType.FLOAT,
+        ram_usage: FieldType.FLOAT,
       },
       tags: ['host'],
     },
@@ -35,7 +36,7 @@ const getSystemMetrics = () => {
   const cpuUsage = cpus.map(cpu => {
     let total = 0;
     for (const type in cpu.times) {
-      total += cpu.times[type];
+      total += cpu.times[type as keyof typeof cpu.times];
     }
     return {
       model: cpu.model,
@@ -65,7 +66,7 @@ setInterval(() => {
 }, 5000);
 
 // Endpoint to get data for the frontend
-app.get('/api/metrics', async (req, res) => {
+app.get('/api/metrics', async (req: Request, res: Response) => {
   try {
     const result = await influx.query(`
       select * from cpu_ram_usage
@@ -74,7 +75,7 @@ app.get('/api/metrics', async (req, res) => {
     `);
     res.json(result);
   } catch (error) {
-    res.status(500).send(error);
+    res.status(500).send(error.message);
   }
 });
 
