@@ -74,7 +74,7 @@ app.get('/api/metrics', async (req: Request, res: Response) => {
       limit 20
     `);
     res.json(result);
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).send(error.message);
   }
 });
