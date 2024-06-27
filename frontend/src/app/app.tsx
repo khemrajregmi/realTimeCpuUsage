@@ -60,7 +60,7 @@ function App() {
     <main>
       <div className="space-y-10">
         <div className='max-w-screen-xl mx-auto p-6'>
-          <h1 className='text-4xl font-bold mb-8'>Server resources monitoring</h1>
+          <h1 className='text-4xl font-bold mb-8'>CPU resources monitoring</h1>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             <CpuUsageChart cpuUsage={cpuUsage} />
             <CpuUsageLineChart isLoading={isLoading} lineChartData={lineChartData} />

@@ -4,7 +4,7 @@ function MemoryInformation({ memoryPercentage }: { memoryPercentage: number}) {
   return (
     <Card className="mx-auto col-span-2">
       <p className="text-center mb-4 font-mono text-sm text-slate-500">
-        Memory Monitoring
+        Memory (RAM) Monitoring
       </p>
       <div className="flex flex-col items-center gap-4">
         <ProgressCircle value={memoryPercentage} size="xl">

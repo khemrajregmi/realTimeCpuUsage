@@ -12,7 +12,7 @@ function MemoryUsageChart({ memory }: { memory: MemoryData}) {
   return (
     <Card className="mx-auto col-span-2">
       <p className="text-center mb-4 font-mono text-sm text-slate-500">
-        Memory information
+        RAM information
       </p>
       <div className="flex flex-col items-start gap-4">
         <List>
