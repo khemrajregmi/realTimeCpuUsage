@@ -15,4 +15,4 @@ the project will run on `http://localhost:4000` and the websocket on `ws://local
 3- run `yarn install && yarn dev`
 
 ### Preview:
-![CPU Monitor Dashboard](preview.mp4)
+![CPU Monitor Dashboard](/ViteReactTS-27June2024-ezgif.com-crop.gif)
