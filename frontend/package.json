@@ -1,9 +1,31 @@
 {
-  "name": "frontend",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "author": "Khem Raj Regmi <khem.r.regmi@gmail.com>",
+  "name": "realtimecpudashboard",
+  "version": "1.0.0",
+  "description": "Starter template for Vite with React (TypeScript). Supports Tailwind. Vitest and @react/testing-library configured and ready to go. Also ESLint, Prettier, Husky, Commit-lint and Atomic Design for components.",
+  "author": "Khem Raj Regmi<khem.r.regmi@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "vite",
+    "typescript",
+    "vitest",
+    "tailwind",
+    "template",
+    "starter",
+    "eslint",
+    "prettier",
+    "husky",
+    "commit-lint"
+  ],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not IE 11"
+  ],
+  "engines": {
+    "node": ">=14",
+    "yarn": ">=1.22.5"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -36,7 +58,7 @@
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
     "@vitejs/plugin-react": "^4.0.4",
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "10.4.13",
     "eslint": "^8.46.0",
     "eslint-plugin-import": "2.27.4",
     "eslint-plugin-react": "7.32.0",
@@ -45,9 +67,9 @@
     "happy-dom": "^12.1.6",
     "husky": "8.0.3",
     "lint-staged": "13.1.0",
-    "postcss": "^8.4.38",
+    "postcss": "8.4.21",
     "prettier": "2.8.2",
-    "tailwindcss": "^3.4.4",
+    "tailwindcss": "3.2.4",
     "typescript": "^5.0.2",
     "vite": "^4.4.8",
     "vite-preset-react": "2.3.0",
